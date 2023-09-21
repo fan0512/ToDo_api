@@ -16,8 +16,8 @@
             <button class="editButton" @click="editTask()">
                 <font-awesome-icon icon="check"/>
             </button>
-            <button @click="cancelEdit()">
-                <font-awesome-icon icon="cancel" />
+            <button @click="cancelEdit()" class="cancelButton">
+                <font-awesome-icon icon="close" />
             </button>
         </li>
     </div>
@@ -57,7 +57,6 @@ export default {
                 });
         },
         editTask(){
-            // this.item.editing=true;
             axios
                 .put("api/task/edit/" + this.task.id, {
                     task: this.task,
@@ -133,6 +132,7 @@ export default {
 }
 li{
     display:flex;
+    width:100%;
 }
 .trashcan {
     background: none;
@@ -154,12 +154,49 @@ li{
     color:rgb(11, 134, 243);
     outline: none;
     cursor:pointer;
+    justify-content: right;
+    align-items: right;
 }
 
 .editButton:hover {
     background: rgb(11, 134, 243);
     color:white;
 }
+.cancelButton{
+    background: none;
+    border:none;
+    outline:none;
+    justify-content: right;
+    align-items: right;
+}
+.cancelButton:hover {
+    background: black;
+    color:white;
+    justify-content: right;
+    align-items: right;
+}
 
+.form-control:focus {
+    border-radius: 0.25rem;
+    border:none;
+    outline:1px;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+
+    border: 0.1;
+    border-radius:0.5rem;
+    outline: none;
+    padding: 4px;
+    margin-right: 10px;
+    width:100%;
+    align-items: center;
+}
+/* .form-control{
+    border:1px;
+    border-radius: 0.25rem;
+    border-color: black;
+    box-shadow: 0 0 0 0.2rem black(0,123,255,0.25);
+
+} */
 
 </style>

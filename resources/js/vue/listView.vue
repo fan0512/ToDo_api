@@ -26,6 +26,13 @@ li{
     border:1px solid rgb(92, 92, 92);
     list-style-type: none;
     margin-block-start: 1px;
-    /* align-items: center; */
+    width:100%;
+
+    position: relative;
+    display: desc;
+    padding: 0.75rem 1.25rem;
+
 }
+
+
 </style>

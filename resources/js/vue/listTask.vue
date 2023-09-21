@@ -191,12 +191,9 @@ li{
     width:100%;
     align-items: center;
 }
-/* .form-control{
-    border:1px;
-    border-radius: 0.25rem;
-    border-color: black;
-    box-shadow: 0 0 0 0.2rem black(0,123,255,0.25);
+.form-control{
+    width:90%;
 
-} */
+}
 
 </style>

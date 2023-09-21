@@ -1,17 +1,17 @@
 <template>
     <div class="task">
-        <div class="col-12" v-show="state.edit === false">
-            <span :class="[task.completed ? 'completed' : '', 'taskText']" @click="updateCheck()" class="taskName">
+        <li v-show="state.edit === false">
+            <button :class="[task.completed ? 'completed' : '', 'taskText']" @click="updateCheck()" class="taskName">
                 {{ task.name }}
-            </span>
+            </button>
             <button class="editButton" @click="startEdit()">
                 <font-awesome-icon icon="edit"/>
             </button>
             <button @click="removeTask()" class="trashcan">
                 <font-awesome-icon icon="trash" />
             </button>
-        </div>
-        <div class="col-12" v-show="state.edit === true">
+        </li>
+        <li v-show="state.edit === true">
             <input class="form-control col-12" v-model="task.name" @keyup.enter="editTask()" placeholder="Update Todo">
             <button class="editButton" @click="editTask()">
                 <font-awesome-icon icon="check"/>
@@ -19,7 +19,7 @@
             <button @click="cancelEdit()">
                 <font-awesome-icon icon="cancel" />
             </button>
-        </div>
+        </li>
     </div>
 </template>
 
@@ -121,12 +121,21 @@ export default {
 
 .task {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
 }
-
+.taskName {
+    cursor:pointer;
+    text-align: left!important;
+    box-shadow: none;
+    border:0;
+    background: none;
+}
+li{
+    display:flex;
+}
 .trashcan {
-    background: #e6e6e6;
+    background: none;
     border: none;
     color: #ff0000;
     outline: none;
@@ -134,16 +143,23 @@ export default {
     justify-content: right;
     align-items: right;
 }
+.trashcan:hover {
+    background: #ff0000;
+    color:white;
+}
 
 .editButton {
-    background: #e6e6e6;
+    background: none;
     border: none;
     color:rgb(11, 134, 243);
     outline: none;
     cursor:pointer;
 }
 
-.taskName {
-    cursor:pointer;
+.editButton:hover {
+    background: rgb(11, 134, 243);
+    color:white;
 }
+
+
 </style>

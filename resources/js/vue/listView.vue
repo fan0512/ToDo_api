@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div v-for="(task, index) in tasks" :key="index">
-            <listTask :task="task" class="task" @taskChanged="$emit('reloadlist')" />
-        </div>
+            <li v-for="(task, index) in tasks" :key="index">
+                <listTask :task="task" class="task" @taskChanged="$emit('reloadlist')" />
+            </li>
     </div>
 </template>
 
@@ -18,8 +18,14 @@ import listTask from './listTask.vue'
 
 <style scoped>
 .task {
-    background: #e6e6e6;
     padding: 5px;
     margin-top: 5px;
+}
+
+li{
+    border:1px solid rgb(92, 92, 92);
+    list-style-type: none;
+    margin-block-start: 1px;
+    /* align-items: center; */
 }
 </style>

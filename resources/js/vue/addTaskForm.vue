@@ -50,23 +50,16 @@ input:focus {
 }
 
 input {
-    background: #f7f7f7;
-    border: 0;
+    border: 0.1;
+    border-radius:0.5rem;
     outline: none;
-    padding: 5px;
+    padding: 10px;
     margin-right: 10px;
+    width:100%;
+    align-items: center;
 }
 
-.plus {
-    font-size: 20px;
-    cursor: pointer;
-}
 
-.active {
-    color: #00ce25;
-}
 
-.inactive {
-    color: #999
-}
+
 </style>

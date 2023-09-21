@@ -115,13 +115,14 @@ export default {
 
 .taskText {
     width: 100%;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    text-align: left;
 }
 
 .task {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .trashcan {
@@ -130,6 +131,8 @@ export default {
     color: #ff0000;
     outline: none;
     cursor: pointer;
+    justify-content: right;
+    align-items: right;
 }
 
 .editButton {

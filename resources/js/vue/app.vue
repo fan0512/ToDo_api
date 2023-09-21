@@ -1,7 +1,7 @@
 <template>
     <div class="todoListContainer">
         <div class="heading">
-            <h2 id="title">Todos-today</h2>
+            <h1 id="title">Todos-today</h1>
             <addTaskForm @reloadlist="getList()" />
         </div>
         <listView :tasks="tasks" @reloadlist="getList()" />
@@ -52,11 +52,11 @@ export default {
 }
 
 .heading {
-    background: #e6e6e6;
+    /* background: #e6e6e6; */
     padding: 10px
 }
 
 #title {
-    text-align: center;
+    text-align: left;
 }
 </style>
